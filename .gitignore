@@ -1,0 +1,22 @@
+*.bak
+.DS_Store
+
+# Eclipse project files
+.classpath
+.project
+.settings
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# python binary
+*.pyc
+.pydevproject
+
+
+
+
+
