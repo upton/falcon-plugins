@@ -26,7 +26,12 @@ if not err:
             metric['timestamp'] = timestamp
             metric['endpoint'] = host
             metric['value'] = info[1]
-            metric['counterType'] = 'GAUGE'
+            
+            if 'zk_packets_sent' == info[0] or 'zk_packets_received' == info[0]:
+                metric['counterType'] = 'COUNTER'
+            else:
+                metric['counterType'] = 'GAUGE'
+                
             metric['step'] = 60
             metric['tags'] = ''
             
